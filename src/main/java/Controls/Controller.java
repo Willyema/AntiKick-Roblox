@@ -52,13 +52,18 @@ public class Controller {
     }
     public Long GenerateMouseClick(){
         Random r = new Random();
-        Long chosenValue = r.nextLong(1, 3);
+        Long chosenValue = new Long(0);
+        if (r.nextBoolean() == true){
+            chosenValue = Long.valueOf(1);
+        } else {
+            chosenValue = Long.valueOf(2);
+        }
         l.info("Chosen mouse click: "+ chosenValue);
         return chosenValue;
     }
     public Long GenerateDelay(){
         Random r = new Random();
-        Long chosenValue = r.nextLong(100, 10000);
+        Long chosenValue = r.longs(1, 100, 10000).toArray()[0];
         return chosenValue;
     }
 }
