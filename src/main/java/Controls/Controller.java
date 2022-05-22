@@ -1,6 +1,5 @@
 package Controls;
 
-import Controls.Tasks.AppPausedTask;
 import Controls.Tasks.KeyboardTask;
 import Controls.Tasks.MouseTask;
 import Controls.variables.KeyboardTimeRemaining;
@@ -26,7 +25,7 @@ public class Controller {
         Long keyDelay = GenerateDelay();
         l.debug("keyDelay --> "+ keyDelay);
         ktm.setTimeRemaining(keyDelay);
-       // t.schedule(new MouseTask(), mouseDelay);
+        t.schedule(new MouseTask(), mouseDelay);
         t.schedule(new KeyboardTask(), keyDelay);
         l.info("Scheduled tasks");
     }

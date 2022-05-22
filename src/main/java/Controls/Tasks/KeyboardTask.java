@@ -1,7 +1,6 @@
 package Controls.Tasks;
 
 import Controls.Controller;
-import Controls.keyBoard.Keyboard;
 import Controls.variables.Paused;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -51,7 +50,7 @@ public class KeyboardTask extends TimerTask {
         if (toWrite != 0) {
             bot.keyPress(toWrite);
             try {
-                Thread.sleep(100);
+                Thread.sleep(r.nextInt(101));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

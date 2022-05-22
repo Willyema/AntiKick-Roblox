@@ -1,6 +1,5 @@
 package Controls.keyBoard;
 
-import Controls.Controller;
 import Controls.variables.KeyboardTimeRemaining;
 import Controls.variables.MouseTimeRemaining;
 import Controls.variables.Paused;
@@ -10,9 +9,6 @@ import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
 
 public class KeyEventListener {
     Logger l = LogManager.getRootLogger();

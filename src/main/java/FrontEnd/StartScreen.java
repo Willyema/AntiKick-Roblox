@@ -4,14 +4,12 @@ import Controls.Controller;
 import Controls.keyBoard.KeyEventListener;
 import Controls.variables.KeyboardTimeRemaining;
 import Controls.variables.MouseTimeRemaining;
-import Logging.LoggerManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 
 public class StartScreen {
     private JPanel Panel;
