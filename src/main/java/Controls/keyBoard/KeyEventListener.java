@@ -32,21 +32,15 @@ public class KeyEventListener {
                 @Override
                 public void nativeKeyPressed(NativeKeyEvent nativeEvent) {
                     String keyText = NativeKeyEvent.getKeyText(nativeEvent.getKeyCode());
-                    switch (keyText) {
-                        case "p":
-                        case "P":
-                            p.togglePaused();
-                            break;
-                        case "e":
-                        case "E":
-                            System.exit(1);
-                            break;
-                        case "v":
-                        case "V":
-                            l.info("Mouse time remaining: " + mtm.getTimeRemaining());
-                            l.info("Keyboard Time remaining: " + ktm.getTimeRemaining());
-                            break;
+                    if (keyText.equalsIgnoreCase("P")) {
+                        p.togglePaused();
+                    } else if (keyText.equalsIgnoreCase("e")) {
+                        System.exit(1);
+                    } else if (keyText.equalsIgnoreCase("v")) {
+                        l.info("Mouse time remaining: " + mtm.getTimeRemaining());
+                        l.info("Keyboard Time remaining: " + ktm.getTimeRemaining());
                     }
+
                 }
             });
         } catch (NativeHookException e) {

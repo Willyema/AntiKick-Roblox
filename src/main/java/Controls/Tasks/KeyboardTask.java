@@ -22,24 +22,16 @@ public class KeyboardTask extends TimerTask {
         int toWrite = 0;
         int rand = r.nextInt(6);
         l.debug("Number Chosen (Keyboard) = " + rand);
-        switch (rand) {
-            case 0:
-                break;
-            case 1:
-                toWrite = VK_W;
-                break;
-            case 2:
-                toWrite = VK_A;
-                break;
-            case 3:
-                toWrite = VK_S;
-                break;
-            case 4:
-                toWrite = VK_D;
-                break;
-            case 5:
-                toWrite = VK_SPACE;
-                break;
+        if (rand == 1){
+            toWrite = VK_W;
+        } else if (rand == 2){
+            toWrite = VK_A;
+        } else if (rand == 3) {
+            toWrite = VK_S;
+        } else if (rand == 4){
+            toWrite = VK_D;
+        } else if (rand == 5) {
+            toWrite = VK_SPACE;
         }
         Robot bot = null;
         try {
